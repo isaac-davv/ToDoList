@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@600;700&display=swap');
+
+:root {
+  --bg-primary: #0d0f14;
+  --bg-secondary: #13161d;
+  --bg-card: #181c25;
+  --bg-card-hover: #1e2330;
+  --border: #252a38;
+  --border-focus: #3d4460;
+  --accent: #4f6ef7;
+  --accent-hover: #6b86ff;
+  --accent-subtle: rgba(79, 110, 247, 0.12);
+  --text-primary: #e8eaf0;
+  --text-secondary: #8b90a0;
+  --text-muted: #555b70;
+  --status-pending: #f0a04b;
+  --status-pending-bg: rgba(240, 160, 75, 0.1);
+  --status-progress: #4f6ef7;
+  --status-progress-bg: rgba(79, 110, 247, 0.1);
+  --status-done: #4bc98a;
+  --status-done-bg: rgba(75, 201, 138, 0.1);
+  --danger: #e05555;
+  --danger-hover: #ff6b6b;
+  --danger-subtle: rgba(224, 85, 85, 0.1);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(ellipse at 20% 20%, rgba(79, 110, 247, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(75, 201, 138, 0.03) 0%, transparent 50%);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+input, textarea, select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 0.6rem 0.85rem;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+select option {
+  background: var(--bg-secondary);
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
